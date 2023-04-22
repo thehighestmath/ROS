@@ -1,0 +1,10 @@
+<launch>
+    <arg name="speed" default="1.0" />
+    <arg name="distance" default="1.0" />
+    <param name="speed" value="$(arg speed)" />
+    <param name="distance" value="$(arg distance)" />
+
+    <node pkg="turtlesim" type="turtlesim_node" name="enemy" output="screen" />
+    <node pkg="turtlesim" type="turtle_teleop_key" name="keyboard" output="screen" />
+    <node pkg="hw1" type="turtle_bot.py" name="leo" output="screen" />
+</launch>
